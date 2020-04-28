@@ -1,0 +1,40 @@
+# Setup Gatsby with `gatsby-plugin-typography`
+
+[gatsby-plugin-typography](https://www.gatsbyjs.org/packages/gatsby-plugin-typography/) is a Gatsby plugin for utilizing the [Typography](https://kyleamathews.github.io/typography.js/) library with minimal configuration.
+
+Based on https://www.gatsbyjs.org/tutorial/part-three
+
+---
+
+Install necessary NPM packages
+
+<NPMPackage name='gatsby-plugin-typography' />
+<NPMPackage name='react-typography' />
+<NPMPackage name='typography' />
+<NPMPackage name='typography-theme-fairy-gates' />
+
+---
+
+Install Gatsby Plugin
+
+<GatsbyPlugin
+  name='gatsby-plugin-typography'
+  options={{ pathToConfigModule: `src/utils/typography` }}
+/>
+
+---
+
+🎉 Nice, now it'll pick up a theme from `src/utils/typography.js`
+
+💻 Let's write that!
+
+<File
+  path='src/utils/typography.js'
+  content='https://gist.githubusercontent.com/toddmath/af02e1c946c88e66852e5826b5877567/raw/94a9131e695469b7273c3532cfc9a5c35121984a/typography.js'
+/>
+
+---
+
+🎈 Read more about Typography and browse other themes at **https://kyleamathews.github.io/typography.js** 🎈
+
+🎈 Read more about gatsby-plugin-typography at **https://www.gatsbyjs.org/packages/gatsby-plugin-typography** 🎈
