@@ -1,0 +1,39 @@
+# Create custom React hook to query siteMetadata
+
+In this recipe we create a React custom hook composed of `useStaticQuery`.
+
+Prerequisites:
+
+1. You’ll need React and ReactDOM 16.8.0 or later (keeping Gatsby updated handles this)
+
+2. Recommended reading: the [Rules of React Hooks](https://reactjs.org/docs/hooks-rules.html)
+
+Based off: https://www.gatsbyjs.org/docs/recipes/querying-data
+
+---
+
+First up, let's create our custom hook!
+
+<File
+  path='src/hooks/useSiteMetadata.js'
+  content='https://gist.github.com/toddmath/66a4b0d99bce942d56ad246086e7cf4e/raw/c5eb5c2e0d9bfa98ce61bca734d51bf8ae48034e/useSiteMetadata.js'
+/>
+
+---
+
+That was easy!!
+
+Now, let's update our `seo.js` component to use it.
+
+<File
+  path='src/components/seo.js'
+  content='https://gist.github.com/toddmath/66a4b0d99bce942d56ad246086e7cf4e/raw/c5eb5c2e0d9bfa98ce61bca734d51bf8ae48034e/seo.js'
+/>
+
+---
+
+Finished! The great thing about hooks is their flexibility and composability.
+
+Any component or page where you need this data it's as easy as importing the hook and calling it.
+
+You can experiment with writing your own hooks to query any data you want.
