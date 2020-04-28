@@ -1,0 +1,49 @@
+# gatsby recipes
+
+Pull data from an external source and creating pages without GraphQL:
+
+You don’t have to use the GraphQL data layer to include data in pages, [though there are reasons why you should consider GraphQL](https://www.gatsbyjs.org/docs/why-gatsby-uses-graphql/).
+
+You can use the node createPages API to pull unstructured data directly into Gatsby sites rather than through GraphQL and source plugins.
+
+In this recipe, we create dynamic pages from data fetched from the [PokéAPI’s REST endpoints](https://www.pokeapi.co/). The _original_ full example can be found on [GitHub](https://github.com/jlengstorf/gatsby-with-unstructured-data/).
+
+Based off: https://www.gatsbyjs.org/docs/recipes/sourcing-data/#pulling-data-from-an-external-source-and-creating-pages-without-graphql
+
+---
+
+Install necessary NPM package [axios](https://github.com/axios/axios)
+
+<NPMPackage name='axios' />
+
+---
+
+Awesome!
+
+Now, in gatsby-node.js, we add the JavaScript code to fetch data from the PokéAPI and programmatically create an index page:
+
+<File
+  path='gatsby-node.js'
+  content='https://gist.githubusercontent.com/toddmath/d3ff1bee961105f0566b29d3255b58d4/raw/f66184327584aecee079ae3f1c54563417807ced/gatsby-node.js'
+/>
+
+---
+
+Nice!
+
+Next we create a template to display Pokémon on the homepage:
+
+<File
+  path='src/templates/all-pokemon.js'
+  content='https://gist.github.com/toddmath/d3ff1bee961105f0566b29d3255b58d4/raw/f66184327584aecee079ae3f1c54563417807ced/all-pokeman.js'
+/>
+
+---
+
+Great! run gatsby develop and point your browser at localhost:8000/pokeman to see our created page.
+
+🎈[Full Pokeman data repo](https://github.com/jlengstorf/gatsby-with-unstructured-data/) 🎈
+
+🎈More on using unstructured data in [Using Gatsby without GraphQL](https://www.gatsbyjs.org/docs/using-gatsby-without-graphql/) 🎈
+
+🎈When and how to [query data with GraphQL](https://www.gatsbyjs.org/docs/graphql-concepts/) for more complex Gatsby sites 🎈
